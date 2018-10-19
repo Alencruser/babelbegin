@@ -5,8 +5,10 @@ document.getElementById('start').addEventListener('click',()=>{
 		table.push(name)
 		document.getElementById('history').innerHTML=`*** "Bonjour ${name} !"***`
 	}else{
-		let spec=document.getElementById('in').value;
-		table.push(spec);
+		let spec=document.getElementById('in').value.split('');
+		spec[0]=spec[0].toUpperCase()
+		spec=spec.join('')
+		table.push(spec)
 		document.getElementById('phrase').innerHTML=`*** "Bonjour ${spec} !"***`
 	}
 })

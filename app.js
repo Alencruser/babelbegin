@@ -7,9 +7,7 @@ document.getElementById('start').addEventListener('click', function () {
 		table.push(name);
 		document.getElementById('history').innerHTML = '*** "Bonjour ' + name + ' !"***';
 	} else {
-		var spec = document.getElementById('in').value.split('');
-		spec[0] = spec[0].toUpperCase();
-		spec = spec.join('');
+		var spec = document.getElementById('in').value;
 		table.push(spec);
 		document.getElementById('phrase').innerHTML = '*** "Bonjour ' + spec + ' !"***';
 	}
